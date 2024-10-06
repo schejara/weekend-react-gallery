@@ -4,8 +4,22 @@ const pool = require('../modules/pool.js');
 
 
 // PUT /gallery/like/:id
-router.put('/like/:id', (req, res) => {
+router.put('/likes/:id', (req, res) => {
+  let listId = req.params.id;
+  //let likesCount = req.body.likes
+  const queryText = `UPDATE gallery SET likes = likes + 1 WHERE id=$1;`;
+  
+
   // code here
+  pool
+    .query(queryText, [listId])
+    .then((response) => {
+      res.sendStatus(204);
+    })
+    .catch((err) => {
+      console.error("Error making PUT query", err);
+      res.sendStatus(500);
+    }); 
 });
 
 // GET /gallery
