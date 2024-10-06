@@ -3,15 +3,17 @@ CREATE TABLE "gallery" (
   "url" VARCHAR,
   "title" VARCHAR,
   "description" TEXT,
-  "likes" INTEGER DEFAULT 0
+  "likes" INTEGER DEFAULT 2
 );
 
 INSERT INTO "gallery" 
 ("url", "title", "description")
 VALUES
-('images/cat2.png','Cat1','A cute cat is surprised to see someone'),
-('images/cat6.png','Cat1','Cats have extremely strong nocturnal eyesight'),
-('images/cat7.jpg','Cat!','Cats are playful animals and enjoy socializing with people'),
-('images/cat8.jpg','Cat!','Cats are carnivores, or meat-eaters'),
-('images/cat9.jpg','Cat!','Cats is very adorable animal'),
-('images/cat10.jpeg','Cat!','Cats like to play with toys ');
+('images/goat_small.jpg','Goat!','Photo of a goat taken at Glacier National Park.'),
+('images/goat_stache.png','Different...','Different...'),
+('images/cat2.png','Cat1','A cute cat is surprised to see someone');
+
+
+SELECT * FROM "gallery";
+
+DROP TABLE "gallery"
