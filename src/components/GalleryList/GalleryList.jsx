@@ -27,7 +27,9 @@ function GalleryList() {
         <GalleryItem
           key={image.id}
           image={image}
+          getGalleryItem = {getGalleryItem}
         />
+        
       ))}
     </div>
   );

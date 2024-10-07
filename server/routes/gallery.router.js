@@ -14,7 +14,7 @@ router.put('/likes/:id', (req, res) => {
   pool
     .query(queryText, [listId])
     .then((response) => {
-      res.sendStatus(204);
+      res.sendStatus(200);
     })
     .catch((err) => {
       console.error("Error making PUT query", err);
