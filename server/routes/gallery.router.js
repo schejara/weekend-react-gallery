@@ -7,7 +7,7 @@ const pool = require('../modules/pool.js');
 router.put('/likes/:id', (req, res) => {
   let listId = req.params.id;
   //let likesCount = req.body.likes
-  const queryText = `UPDATE gallery SET likes = likes + 1 WHERE id=$1;`;
+  const queryText = `UPDATE gallery SET likes = likes + 1 WHERE id=$1 ;`;
   
 
   // code here
